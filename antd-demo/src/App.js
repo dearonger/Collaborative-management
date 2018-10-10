@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { DatePicker, message, Carousel } from "antd";
+import { DatePicker, message, Carousel, Button } from "antd";
 
 class App extends React.Component {
   constructor(props) {
@@ -33,7 +33,15 @@ class App extends React.Component {
             <h3>five</h3>
           </div>
         </Carousel>
-        <DatePicker onChange={value => this.handleChange(value)} />
+        <div>
+          <Button type="primary" style={{ marginTop: "20px" }}>
+            Primary
+          </Button>
+        </div>
+        <DatePicker
+          onChange={value => this.handleChange(value)}
+          style={{ marginTop: "20px" }}
+        />
         <div style={{ marginTop: 20 }}>
           当前日期：
           {this.state.date.toString()}
